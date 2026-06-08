@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Calculator, Save, ArrowLeft, Printer, AlertTriangle, CheckCircle, RotateCcw } from 'lucide-react';
 import { StepIndicator } from '../../components/Form/StepIndicator';
 import { AlertBanner } from '../../components/Form/AlertBanner';
-import { ReviewModal } from '../../components/ReviewModal/ReviewModal';
+import { DetailDrawer } from '../../components/DetailDrawer/DetailDrawer';
 import { useGaugeStore } from '../../store/useGaugeStore';
 import { useHistoryStore } from '../../store/useHistoryStore';
 import { validateGaugeReadings, canCalculate, formatReading } from '../../utils/validation';
@@ -390,7 +390,7 @@ export const CalculateReview: React.FC = () => {
         </div>
       </div>
 
-      <ReviewModal
+      <DetailDrawer
         isOpen={showReviewModal}
         onClose={() => setShowReviewModal(false)}
         onConfirm={handleConfirmReview}
